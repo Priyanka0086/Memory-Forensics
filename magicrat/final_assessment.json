@@ -1,0 +1,106 @@
+{
+    "total_score": 0,
+    "verdict": "CLEAN",
+    "details": [
+        {
+            "ioc": "6FEDAAF41148F8E0803451B44AA5270AE6F96BF6D31CB81B3FE9459D2239E54E",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "1D61DD5E920F13D3280B8FFC40BB0C6164D29CAF2220BF526933177D050FC379",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "FB3AB4DD4CB6390D94A0057A052C7A60",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "8AC94113AD25518D369E4EE37BEDAB4F",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "9F070E1F4AA9AE0A5EA084FEBBD5983293E5748D0A5CC5D46098CB9271D2D508",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "38FF53C1CCC1EE4C508C0F83A88C4E19",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "0C11172F26410EEA34F2F3888548B293",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "880C305081BCFAD00300D409ADEEC9D334FCF164263B749DBFEAAAE118065FDE",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "224.0.0.252",
+            "type": "ip",
+            "score": 0
+        },
+        {
+            "ioc": "36F670D89040709013F6A460176767EC",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "C318D15F81AD95F50A0DF8189D6BD699",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "1C90A322F55D574EF703B9CB0ADFB379CEFA33A2B5D72F04A6E9AAA2F209F6B5",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "418299F70B35752CB048ED773C59002E",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "172.16.3.81",
+            "type": "ip",
+            "score": 0
+        },
+        {
+            "ioc": "CAEE994F79D85E47C06E5FA9CDEAE453",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "AD09A75E04A6F259F7A94D9D3BFAF2BD",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "BFE7A626BF3B9080997401969954AE0376476FD220E80CC52707FF31CE827D53",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "5.4.d.d.6.5.f.3.5.4.b.3.a.a.8.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "185.34.169.192.in-addr.arpa",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "C7645D43451C6D94D87F4D07BDE59C89",
+            "type": "hash",
+            "score": 0
+        }
+    ]
+}
