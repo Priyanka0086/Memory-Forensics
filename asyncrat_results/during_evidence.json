@@ -1,0 +1,3541 @@
+{
+  "processes": {
+    "0": {
+      "pid": "0",
+      "process_name": "0",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 0,
+      "evidence_count": 1,
+      "summary": "0 generated 1 evidence item(s). Overall risk is LOW. Key observations include Network Activity. Total detection score: 0.",
+      "evidence": [
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        }
+      ]
+    },
+    "4": {
+      "pid": "4",
+      "process_name": "4",
+      "risk": "MEDIUM",
+      "confidence": "Low",
+      "score": 25,
+      "evidence_count": 4,
+      "summary": "4 generated 4 evidence item(s). Overall risk is MEDIUM. Key observations include Network Activity, High Connection Count, Empty Command Line, Anonymous Memory Regions. Total detection score: 25.",
+      "evidence": [
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "High Connection Count",
+          "severity": "MEDIUM",
+          "reason": "192 active connections detected.",
+          "why_it_matters": "An unusually high number of network connections may indicate scanning, botnet activity, or malware.",
+          "score": 10
+        },
+        {
+          "feature": "Empty Command Line",
+          "severity": "LOW",
+          "reason": "Process has an empty command line.",
+          "why_it_matters": "Legitimate applications usually retain command-line information.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "104": {
+      "pid": "104",
+      "process_name": "104",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 8,
+      "summary": "104 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 373 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "373 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "373 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "373 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 980 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "980 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Image Path Mismatch",
+          "severity": "MEDIUM",
+          "reason": "Image path differs from command line.",
+          "why_it_matters": "Attackers sometimes disguise executable locations.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "108": {
+      "pid": "108",
+      "process_name": "108",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "108 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 3422 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "3422 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "3422 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "3422 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1230 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1230 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "340": {
+      "pid": "340",
+      "process_name": "340",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 10,
+      "evidence_count": 1,
+      "summary": "340 generated 1 evidence item(s). Overall risk is LOW. Key observations include Anonymous Memory Regions. Total detection score: 10.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "376": {
+      "pid": "376",
+      "process_name": "376",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "376 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 472 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "472 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "472 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "472 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1600 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1600 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "384": {
+      "pid": "384",
+      "process_name": "384",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "384 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 1095 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "1095 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "1095 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "1095 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 3432 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "3432 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "424": {
+      "pid": "424",
+      "process_name": "424",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "424 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 546 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "546 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "546 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "546 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1500 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1500 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "436": {
+      "pid": "436",
+      "process_name": "436",
+      "risk": "MEDIUM",
+      "confidence": "Low",
+      "score": 20,
+      "evidence_count": 2,
+      "summary": "436 generated 2 evidence item(s). Overall risk is MEDIUM. Key observations include Orphan Process, Anonymous Memory Regions. Total detection score: 20.",
+      "evidence": [
+        {
+          "feature": "Orphan Process",
+          "severity": "MEDIUM",
+          "reason": "Parent process is missing.",
+          "why_it_matters": "Orphan processes may result from process hollowing or terminated parents.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "512": {
+      "pid": "512",
+      "process_name": "512",
+      "risk": "MEDIUM",
+      "confidence": "Low",
+      "score": 20,
+      "evidence_count": 2,
+      "summary": "512 generated 2 evidence item(s). Overall risk is MEDIUM. Key observations include Orphan Process, Anonymous Memory Regions. Total detection score: 20.",
+      "evidence": [
+        {
+          "feature": "Orphan Process",
+          "severity": "MEDIUM",
+          "reason": "Parent process is missing.",
+          "why_it_matters": "Orphan processes may result from process hollowing or terminated parents.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "536": {
+      "pid": "536",
+      "process_name": "536",
+      "risk": "MEDIUM",
+      "confidence": "Low",
+      "score": 20,
+      "evidence_count": 3,
+      "summary": "536 generated 3 evidence item(s). Overall risk is MEDIUM. Key observations include Network Activity, Orphan Process, Anonymous Memory Regions. Total detection score: 20.",
+      "evidence": [
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Orphan Process",
+          "severity": "MEDIUM",
+          "reason": "Parent process is missing.",
+          "why_it_matters": "Orphan processes may result from process hollowing or terminated parents.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "572": {
+      "pid": "572",
+      "process_name": "572",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 100,
+      "evidence_count": 8,
+      "summary": "572 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 100.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "53 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "53 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "53 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 660 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "660 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Image Path Mismatch",
+          "severity": "MEDIUM",
+          "reason": "Image path differs from command line.",
+          "why_it_matters": "Attackers sometimes disguise executable locations.",
+          "score": 10
+        },
+        {
+          "feature": "Orphan Process",
+          "severity": "MEDIUM",
+          "reason": "Parent process is missing.",
+          "why_it_matters": "Orphan processes may result from process hollowing or terminated parents.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "648": {
+      "pid": "648",
+      "process_name": "648",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 10,
+      "evidence_count": 2,
+      "summary": "648 generated 2 evidence item(s). Overall risk is LOW. Key observations include Network Activity, Anonymous Memory Regions. Total detection score: 10.",
+      "evidence": [
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "656": {
+      "pid": "656",
+      "process_name": "656",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 9,
+      "summary": "656 generated 9 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 805 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "805 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "805 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "805 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 2440 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "2440 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "High Connection Count",
+          "severity": "MEDIUM",
+          "reason": "557 active connections detected.",
+          "why_it_matters": "An unusually high number of network connections may indicate scanning, botnet activity, or malware.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "796": {
+      "pid": "796",
+      "process_name": "796",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "796 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 293 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "293 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "293 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "293 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1040 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1040 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "868": {
+      "pid": "868",
+      "process_name": "868",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "868 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 419 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "419 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "419 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "419 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1600 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1600 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "892": {
+      "pid": "892",
+      "process_name": "892",
+      "risk": "HIGH",
+      "confidence": "High",
+      "score": 65,
+      "evidence_count": 4,
+      "summary": "892 generated 4 evidence item(s). Overall risk is HIGH. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, Unknown DLL. Total detection score: 65.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "26 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "26 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "26 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "160 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        }
+      ]
+    },
+    "920": {
+      "pid": "920",
+      "process_name": "920",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "920 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 245 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "245 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "245 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "245 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 660 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "660 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1116": {
+      "pid": "1116",
+      "process_name": "1116",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "1116 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 430 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "430 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "430 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "430 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1892 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1892 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1260": {
+      "pid": "1260",
+      "process_name": "1260",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "1260 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 393 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "393 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "393 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "393 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1360 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1360 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1268": {
+      "pid": "1268",
+      "process_name": "1268",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "1268 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 171 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "171 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "171 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "171 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 700 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "700 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1556": {
+      "pid": "1556",
+      "process_name": "1556",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 80,
+      "evidence_count": 6,
+      "summary": "1556 generated 6 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 80.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "99 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "99 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "99 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 800 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "800 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1784": {
+      "pid": "1784",
+      "process_name": "1784",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 120,
+      "evidence_count": 11,
+      "summary": "1784 generated 11 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 120.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 150 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "150 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "150 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "150 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 813 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "DLL Name Spoofing",
+          "severity": "MEDIUM",
+          "reason": "Suspicious DLL names: 248a322de9d157b2663f35acdebedfde4da60132ee266aa31fa974904a4a8296.exe, 248a322de9d157b2663f35acdebedfde4da60132ee266aa31fa974904a4a8296.exe, 248a322de9d157b2663f35acdebedfde4da60132ee266aa31fa974904a4a8296.exe, 248a322de9d157b2663f35acdebedfde4da60132ee266aa31fa974904a4a8296.exe, 248a322de9d157b2663f35acdebedfde4da60132ee266aa31fa974904a4a8296.exe",
+          "why_it_matters": "Malware often mimics legitimate DLL names to evade casual inspection.",
+          "score": 10
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "813 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Base64 Command Line",
+          "severity": "HIGH",
+          "reason": "Base64-encoded content detected in the command line.",
+          "why_it_matters": "PowerShell and malware frequently encode commands using Base64.",
+          "score": 20
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.89.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "19 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "1956": {
+      "pid": "1956",
+      "process_name": "1956",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "1956 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 120 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "120 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "120 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "120 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 960 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "960 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2136": {
+      "pid": "2136",
+      "process_name": "2136",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2136 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 262 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "262 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "262 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "262 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1220 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1220 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2140": {
+      "pid": "2140",
+      "process_name": "2140",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2140 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 160 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "160 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "160 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "160 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 840 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "840 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2148": {
+      "pid": "2148",
+      "process_name": "2148",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 10,
+      "evidence_count": 1,
+      "summary": "2148 generated 1 evidence item(s). Overall risk is LOW. Key observations include Anonymous Memory Regions. Total detection score: 10.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2192": {
+      "pid": "2192",
+      "process_name": "2192",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "2192 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 380 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "380 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "380 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "380 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1660 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1660 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2352": {
+      "pid": "2352",
+      "process_name": "2352",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2352 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 268 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "268 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "268 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "268 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1698 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1698 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2360": {
+      "pid": "2360",
+      "process_name": "2360",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 9,
+      "summary": "2360 generated 9 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 560 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "560 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "560 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "560 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 900 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "900 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "High Connection Count",
+          "severity": "MEDIUM",
+          "reason": "50260 active connections detected.",
+          "why_it_matters": "An unusually high number of network connections may indicate scanning, botnet activity, or malware.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2368": {
+      "pid": "2368",
+      "process_name": "2368",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 90,
+      "evidence_count": 9,
+      "summary": "2368 generated 9 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 90.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 208 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "208 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "208 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "208 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1500 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1500 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.85.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2404": {
+      "pid": "2404",
+      "process_name": "2404",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 10,
+      "evidence_count": 1,
+      "summary": "2404 generated 1 evidence item(s). Overall risk is LOW. Key observations include Anonymous Memory Regions. Total detection score: 10.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2416": {
+      "pid": "2416",
+      "process_name": "2416",
+      "risk": "HIGH",
+      "confidence": "High",
+      "score": 75,
+      "evidence_count": 5,
+      "summary": "2416 generated 5 evidence item(s). Overall risk is HIGH. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, Unknown DLL, Anonymous Memory Regions. Total detection score: 75.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "46 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "46 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "46 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "180 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2432": {
+      "pid": "2432",
+      "process_name": "2432",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2432 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 156 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "156 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "156 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "156 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 810 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "810 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2440": {
+      "pid": "2440",
+      "process_name": "2440",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "2440 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 160 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "160 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "160 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "160 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 620 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "620 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2460": {
+      "pid": "2460",
+      "process_name": "2460",
+      "risk": "LOW",
+      "confidence": "Low",
+      "score": 10,
+      "evidence_count": 1,
+      "summary": "2460 generated 1 evidence item(s). Overall risk is LOW. Key observations include Anonymous Memory Regions. Total detection score: 10.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2524": {
+      "pid": "2524",
+      "process_name": "2524",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 8,
+      "summary": "2524 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 242 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "242 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "242 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "242 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 680 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "680 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2532": {
+      "pid": "2532",
+      "process_name": "2532",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 9,
+      "summary": "2532 generated 9 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 324 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "324 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "324 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "324 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1500 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1500 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Network Activity",
+          "severity": "INFO",
+          "reason": "The process has active network connections.",
+          "why_it_matters": "Network communication is normal for many processes, but becomes significant when combined with other suspicious behaviors.",
+          "score": 0
+        },
+        {
+          "feature": "High Connection Count",
+          "severity": "MEDIUM",
+          "reason": "122 active connections detected.",
+          "why_it_matters": "An unusually high number of network connections may indicate scanning, botnet activity, or malware.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2568": {
+      "pid": "2568",
+      "process_name": "2568",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 8,
+      "summary": "2568 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 181 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "181 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "181 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "181 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1380 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1380 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Image Path Mismatch",
+          "severity": "MEDIUM",
+          "reason": "Image path differs from command line.",
+          "why_it_matters": "Attackers sometimes disguise executable locations.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2764": {
+      "pid": "2764",
+      "process_name": "2764",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 80,
+      "evidence_count": 6,
+      "summary": "2764 generated 6 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 80.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "59 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "59 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "59 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 440 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "440 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2844": {
+      "pid": "2844",
+      "process_name": "2844",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2844 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "34 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "34 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "34 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 760 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "760 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.62.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2868": {
+      "pid": "2868",
+      "process_name": "2868",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 8,
+      "summary": "2868 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 320 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "320 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "320 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "320 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 940 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "940 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Image Path Mismatch",
+          "severity": "MEDIUM",
+          "reason": "Image path differs from command line.",
+          "why_it_matters": "Attackers sometimes disguise executable locations.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2896": {
+      "pid": "2896",
+      "process_name": "2896",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 105,
+      "evidence_count": 9,
+      "summary": "2896 generated 9 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 105.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 114 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "114 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "114 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "114 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1020 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1020 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Image Path Mismatch",
+          "severity": "MEDIUM",
+          "reason": "Image path differs from command line.",
+          "why_it_matters": "Attackers sometimes disguise executable locations.",
+          "score": 10
+        },
+        {
+          "feature": "Orphan Process",
+          "severity": "MEDIUM",
+          "reason": "Parent process is missing.",
+          "why_it_matters": "Orphan processes may result from process hollowing or terminated parents.",
+          "score": 10
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2904": {
+      "pid": "2904",
+      "process_name": "2904",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 105,
+      "evidence_count": 8,
+      "summary": "2904 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 105.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 1231 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "1231 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "1231 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "1231 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 4560 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "4560 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Parent Process Mismatch",
+          "severity": "HIGH",
+          "reason": "Unexpected parent-child relationship detected.",
+          "why_it_matters": "Process lineage inconsistent with normal Windows behaviour.",
+          "score": 20
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2988": {
+      "pid": "2988",
+      "process_name": "2988",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "2988 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 209 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "209 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "209 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "209 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1760 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1760 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "2992": {
+      "pid": "2992",
+      "process_name": "2992",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 95,
+      "evidence_count": 8,
+      "summary": "2992 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 95.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 533 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "533 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "533 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "533 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1300 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "DLL Name Spoofing",
+          "severity": "MEDIUM",
+          "reason": "Suspicious DLL names: Procmon64.exe, Procmon64.exe, Procmon64.exe, Procmon64.exe, Procmon64.exe",
+          "why_it_matters": "Malware often mimics legitimate DLL names to evade casual inspection.",
+          "score": 10
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1300 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "3316": {
+      "pid": "3316",
+      "process_name": "3316",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 80,
+      "evidence_count": 6,
+      "summary": "3316 generated 6 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 80.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "79 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "79 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "79 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 620 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "620 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "3756": {
+      "pid": "3756",
+      "process_name": "3756",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 90,
+      "evidence_count": 8,
+      "summary": "3756 generated 8 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 90.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 680 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "680 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "680 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "680 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 2020 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "2020 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.67.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "3768": {
+      "pid": "3768",
+      "process_name": "3768",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "3768 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 260 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "260 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "260 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "260 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 2220 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "2220 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "3824": {
+      "pid": "3824",
+      "process_name": "3824",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "3824 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 180 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "180 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "180 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "180 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 980 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "980 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "4348": {
+      "pid": "4348",
+      "process_name": "4348",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 80,
+      "evidence_count": 6,
+      "summary": "4348 generated 6 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 80.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "70 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "70 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "70 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 393 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "393 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "13 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "4468": {
+      "pid": "4468",
+      "process_name": "4468",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "4468 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include High Thread Count, Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "High Thread Count",
+          "severity": "LOW",
+          "reason": "The process created 243 threads.",
+          "why_it_matters": "Processes with an unusually large number of threads may deserve further investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "243 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "243 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "243 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 1754 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "1754 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "19 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    },
+    "4472": {
+      "pid": "4472",
+      "process_name": "4472",
+      "risk": "HIGH",
+      "confidence": "High",
+      "score": 70,
+      "evidence_count": 5,
+      "summary": "4472 generated 5 evidence item(s). Overall risk is HIGH. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, Unknown DLL, Random Process Name. Total detection score: 70.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "27 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "27 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "27 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "92 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.52.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        }
+      ]
+    },
+    "4560": {
+      "pid": "4560",
+      "process_name": "4560",
+      "risk": "CRITICAL",
+      "confidence": "Very High",
+      "score": 85,
+      "evidence_count": 7,
+      "summary": "4560 generated 7 evidence item(s). Overall risk is CRITICAL. Key observations include Anonymous Memory Thread, Thread Start Address Anomaly, Thread Without Module, High DLL Count, Unknown DLL. Total detection score: 85.",
+      "evidence": [
+        {
+          "feature": "Anonymous Memory Thread",
+          "severity": "HIGH",
+          "reason": "68 thread(s) execute from anonymous memory.",
+          "why_it_matters": "Threads executing outside image-backed memory are commonly associated with injected code.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Start Address Anomaly",
+          "severity": "HIGH",
+          "reason": "68 thread(s) have suspicious start addresses.",
+          "why_it_matters": "Thread start addresses that do not belong to loaded modules may indicate process injection.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "Thread Without Module",
+          "severity": "HIGH",
+          "reason": "68 thread(s) are not associated with any loaded module.",
+          "why_it_matters": "Execution outside a legitimate image is a common memory-injection indicator.",
+          "score": 20,
+          "mitre": {
+            "id": "T1055",
+            "name": "Process Injection"
+          }
+        },
+        {
+          "feature": "High DLL Count",
+          "severity": "LOW",
+          "reason": "The process loaded 900 DLLs.",
+          "why_it_matters": "An unusually large number of loaded modules may indicate abnormal execution.",
+          "score": 5
+        },
+        {
+          "feature": "Unknown DLL",
+          "severity": "LOW",
+          "reason": "900 DLL(s) not found in the baseline list.",
+          "why_it_matters": "Modules outside the known baseline deserve additional investigation.",
+          "score": 5
+        },
+        {
+          "feature": "Random Process Name",
+          "severity": "LOW",
+          "reason": "Process name entropy = 3.67.",
+          "why_it_matters": "Random-looking process names are common among malware.",
+          "score": 5
+        },
+        {
+          "feature": "Anonymous Memory Regions",
+          "severity": "MEDIUM",
+          "reason": "20 memory region(s) without file backing.",
+          "why_it_matters": "Anonymous executable memory may contain unpacked malware.",
+          "score": 10
+        }
+      ]
+    }
+  }
+}
