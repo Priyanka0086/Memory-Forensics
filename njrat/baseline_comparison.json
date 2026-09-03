@@ -1,0 +1,4014 @@
+{
+  "summary": {
+    "baseline_process_count": 53,
+    "current_process_count": 103,
+    "matched_process_count": 53,
+    "new_process_count": 50,
+    "terminated_process_count": 0,
+    "driver_count_baseline": 0,
+    "driver_count_current": 0,
+    "new_driver_count": 0
+  },
+  "matched_processes": [
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "424",
+      "current_pid": "424",
+      "match_type": "pid_exact",
+      "ppid_changed": true,
+      "anomaly_score": 7,
+      "risk_flags_activated": [
+        "pslist_features.orphan_process_flag"
+      ],
+      "risk_flags_deactivated": [
+        "netstat_features.has_network_connection"
+      ],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 589,
+          "current": 0,
+          "delta": -589,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 589,
+          "current": 0,
+          "delta": -589,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 589,
+          "current": 0,
+          "delta": -589,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 589,
+          "current": 0,
+          "delta": -589,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1500,
+          "current": 0,
+          "delta": -1500,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 60,
+          "current": 0,
+          "delta": -60,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 60,
+          "current": 0,
+          "delta": -60,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.process_depth",
+          "baseline": 2,
+          "current": 0,
+          "delta": -2,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.process_name_entropy",
+          "baseline": 3.096,
+          "current": 2.419,
+          "delta": -0.677,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 47,
+          "current": 244,
+          "delta": 197,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "1268",
+      "current_pid": "1268",
+      "match_type": "pid_exact",
+      "ppid_changed": true,
+      "anomaly_score": 38,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 186,
+          "current": 871,
+          "delta": 685,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 186,
+          "current": 871,
+          "delta": 685,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 186,
+          "current": 871,
+          "delta": 685,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 186,
+          "current": 871,
+          "delta": 685,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 700,
+          "current": 2992,
+          "delta": 2292,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 64,
+          "current": 56,
+          "delta": -8,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "System",
+      "baseline_pid": "4",
+      "current_pid": "4",
+      "match_type": "pid_exact",
+      "ppid_changed": false,
+      "anomaly_score": 16,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 216,
+          "current": 449,
+          "delta": 233,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 216,
+          "current": 449,
+          "delta": 233,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "384",
+      "current_pid": "384",
+      "match_type": "pid_exact",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 1158,
+          "current": 2506,
+          "delta": 1348,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 1158,
+          "current": 2506,
+          "delta": 1348,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 1158,
+          "current": 2506,
+          "delta": 1348,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 1158,
+          "current": 2506,
+          "delta": 1348,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 3525,
+          "current": 8416,
+          "delta": 4891,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 60,
+          "current": 134,
+          "delta": 74,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 60,
+          "current": 134,
+          "delta": 74,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "<pid:0>",
+      "baseline_pid": "0",
+      "current_pid": "0",
+      "match_type": "pid_exact",
+      "ppid_changed": false,
+      "anomaly_score": 6,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 32,
+          "current": 795,
+          "delta": 763,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 32,
+          "current": 795,
+          "delta": 763,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "868",
+      "current_pid": "868",
+      "match_type": "pid_exact",
+      "ppid_changed": true,
+      "anomaly_score": 38,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 440,
+          "current": 930,
+          "delta": 490,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 440,
+          "current": 930,
+          "delta": 490,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 440,
+          "current": 930,
+          "delta": 490,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 440,
+          "current": 930,
+          "delta": 490,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1600,
+          "current": 3520,
+          "delta": 1920,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "sysmon64.exe",
+      "baseline_pid": "2460",
+      "current_pid": "2460",
+      "match_type": "pid_exact",
+      "ppid_changed": true,
+      "anomaly_score": 43,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 0,
+          "current": 264,
+          "delta": 264,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 0,
+          "current": 264,
+          "delta": 264,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 0,
+          "current": 264,
+          "delta": 264,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 0,
+          "current": 264,
+          "delta": 264,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 0,
+          "current": 2112,
+          "delta": 2112,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.process_name_entropy",
+          "baseline": 3.252,
+          "current": 3.096,
+          "delta": -0.1559999999999997,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 23,
+          "current": 42,
+          "delta": 19,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {
+        "dll_features": [
+          {
+            "name": "svchost.exe",
+            "unsigned_dll": false,
+            "dll_path_entropy": null,
+            "dll_from_temp_appdata": false,
+            "missing_from_peb_reflective_indicator": false,
+            "dll_not_in_known_list": true,
+            "dll_name_spoof_suspect": false,
+            "dll_zero_time_stamp": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Velociraptor.exe",
+      "baseline_pid": "108",
+      "current_pid": "2472",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 1551,
+          "current": 7171,
+          "delta": 5620,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 1551,
+          "current": 7171,
+          "delta": 5620,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 1551,
+          "current": 7171,
+          "delta": 5620,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 1551,
+          "current": 7171,
+          "delta": 5620,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1224,
+          "current": 2771,
+          "delta": 1547,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 42,
+          "current": 88,
+          "delta": 46,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 42,
+          "current": 88,
+          "delta": 46,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "Microsoft.ActiveDirectory.WebServices.exe",
+      "baseline_pid": "2368",
+      "current_pid": "2860",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 24,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 250,
+          "current": 431,
+          "delta": 181,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 250,
+          "current": 431,
+          "delta": 181,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 250,
+          "current": 431,
+          "delta": 181,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 250,
+          "current": 431,
+          "delta": 181,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1500,
+          "current": 3300,
+          "delta": 1800,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 94,
+          "current": 150,
+          "delta": 56,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 94,
+          "current": 150,
+          "delta": 56,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "vds.exe",
+      "baseline_pid": "2136",
+      "current_pid": "2828",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 38,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 280,
+          "current": 580,
+          "delta": 300,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 280,
+          "current": 580,
+          "delta": 300,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 280,
+          "current": 580,
+          "delta": 300,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 280,
+          "current": 580,
+          "delta": 300,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1220,
+          "current": 2684,
+          "delta": 1464,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "VSSVC.exe",
+      "baseline_pid": "1556",
+      "current_pid": "3184",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 38,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 104,
+          "current": 223,
+          "delta": 119,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 104,
+          "current": 223,
+          "delta": 119,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 104,
+          "current": 223,
+          "delta": 119,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 104,
+          "current": 223,
+          "delta": 119,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 760,
+          "current": 1720,
+          "delta": 960,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 19,
+          "current": 43,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 19,
+          "current": 43,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "dns.exe",
+      "baseline_pid": "2360",
+      "current_pid": "2972",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 559,
+          "current": 1228,
+          "delta": 669,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 559,
+          "current": 1228,
+          "delta": 669,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 559,
+          "current": 1228,
+          "delta": 669,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 559,
+          "current": 1228,
+          "delta": 669,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 900,
+          "current": 1980,
+          "delta": 1080,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 50260,
+          "current": 110572,
+          "delta": 60312,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 50260,
+          "current": 110572,
+          "delta": 60312,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "dfssvc.exe",
+      "baseline_pid": "2524",
+      "current_pid": "3064",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 255,
+          "current": 523,
+          "delta": 268,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 255,
+          "current": 523,
+          "delta": 268,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 255,
+          "current": 523,
+          "delta": 268,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 255,
+          "current": 523,
+          "delta": 268,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 680,
+          "current": 1496,
+          "delta": 816,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "wininit.exe",
+      "baseline_pid": "536",
+      "current_pid": "532",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "services.exe",
+      "baseline_pid": "648",
+      "current_pid": "644",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "wlms.exe",
+      "baseline_pid": "2416",
+      "current_pid": "1868",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 22,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 70,
+          "current": 120,
+          "delta": 50,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 70,
+          "current": 120,
+          "delta": 50,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 70,
+          "current": 120,
+          "delta": 50,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 70,
+          "current": 120,
+          "delta": 50,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 180,
+          "current": 396,
+          "delta": 216,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "MpCmdRun.exe",
+      "baseline_pid": "2896",
+      "current_pid": "3532",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 6,
+      "risk_flags_activated": [
+        "pslist_features.commandline_empty"
+      ],
+      "risk_flags_deactivated": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 120,
+          "current": 0,
+          "delta": -120,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 120,
+          "current": 0,
+          "delta": -120,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 120,
+          "current": 0,
+          "delta": -120,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 120,
+          "current": 0,
+          "delta": -120,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1020,
+          "current": 0,
+          "delta": -1020,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 141,
+          "current": 0,
+          "delta": -141,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 1,
+          "delta": -19,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 1,
+          "delta": -19,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "conhost.exe",
+      "baseline_pid": "3980",
+      "current_pid": "404",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 448,
+          "current": 196,
+          "delta": -252,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 16,
+          "current": 7,
+          "delta": -9,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 16,
+          "current": 7,
+          "delta": -9,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "msdtc.exe",
+      "baseline_pid": "3824",
+      "current_pid": "3844",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 218,
+          "current": 9,
+          "delta": -209,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 218,
+          "current": 9,
+          "delta": -209,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 218,
+          "current": 9,
+          "delta": -209,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 218,
+          "current": 9,
+          "delta": -209,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 980,
+          "current": 49,
+          "delta": -931,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "dstokenclean.exe",
+      "baseline_pid": "3288",
+      "current_pid": "2372",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 0,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 48,
+          "current": 21,
+          "delta": -27,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 128,
+          "current": 56,
+          "delta": -72,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 16,
+          "current": 7,
+          "delta": -9,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 16,
+          "current": 7,
+          "delta": -9,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "RuntimeBroker.exe",
+      "baseline_pid": "2140",
+      "current_pid": "2644",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 19,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 181,
+          "current": 233,
+          "delta": 52,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 181,
+          "current": 233,
+          "delta": 52,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 181,
+          "current": 233,
+          "delta": 52,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 181,
+          "current": 233,
+          "delta": 52,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 765,
+          "current": 1784,
+          "delta": 1019,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "unsecapp.exe",
+      "baseline_pid": "2764",
+      "current_pid": "2256",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 60,
+          "current": 3,
+          "delta": -57,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 60,
+          "current": 3,
+          "delta": -57,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 60,
+          "current": 3,
+          "delta": -57,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 60,
+          "current": 3,
+          "delta": -57,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 440,
+          "current": 22,
+          "delta": -418,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "csrss.exe",
+      "baseline_pid": "436",
+      "current_pid": "440",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 13,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "csrss.exe",
+      "baseline_pid": "512",
+      "current_pid": "508",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "ShellExperienceHost.exe",
+      "baseline_pid": "3756",
+      "current_pid": "1192",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 680,
+          "current": 35,
+          "delta": -645,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 680,
+          "current": 35,
+          "delta": -645,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 680,
+          "current": 35,
+          "delta": -645,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 680,
+          "current": 35,
+          "delta": -645,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 2020,
+          "current": 111,
+          "delta": -1909,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "SppExtComObj.Exe",
+      "baseline_pid": "2844",
+      "current_pid": "2444",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 19,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 55,
+          "current": 83,
+          "delta": 28,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 55,
+          "current": 83,
+          "delta": 28,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 55,
+          "current": 83,
+          "delta": 28,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 55,
+          "current": 83,
+          "delta": 28,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 760,
+          "current": 1672,
+          "delta": 912,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "sppsvc.exe",
+      "baseline_pid": "2148",
+      "current_pid": "2748",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 13,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "dwm.exe",
+      "baseline_pid": "104",
+      "current_pid": "96",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 393,
+          "current": 19,
+          "delta": -374,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 393,
+          "current": 19,
+          "delta": -374,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 393,
+          "current": 19,
+          "delta": -374,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 393,
+          "current": 19,
+          "delta": -374,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 980,
+          "current": 50,
+          "delta": -930,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "smss.exe",
+      "baseline_pid": "340",
+      "current_pid": "336",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 0,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "dfsrs.exe",
+      "baseline_pid": "2532",
+      "current_pid": "3000",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 355,
+          "current": 735,
+          "delta": 380,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 355,
+          "current": 735,
+          "delta": 380,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 355,
+          "current": 735,
+          "delta": 380,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 355,
+          "current": 735,
+          "delta": 380,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1500,
+          "current": 3256,
+          "delta": 1756,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 121,
+          "current": 266,
+          "delta": 145,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 121,
+          "current": 266,
+          "delta": 145,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "376",
+      "current_pid": "8",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 47,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 500,
+          "current": 1388,
+          "delta": 888,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 500,
+          "current": 1388,
+          "delta": 888,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 500,
+          "current": 1388,
+          "delta": 888,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 500,
+          "current": 1388,
+          "delta": 888,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1600,
+          "current": 3754,
+          "delta": 2154,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 132,
+          "delta": 132,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 132,
+          "delta": 132,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 63,
+          "current": 47,
+          "delta": -16,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "796",
+      "current_pid": "300",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [
+        "netstat_features.has_network_connection"
+      ],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 300,
+          "current": 18,
+          "delta": -282,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 300,
+          "current": 18,
+          "delta": -282,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 300,
+          "current": 18,
+          "delta": -282,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 300,
+          "current": 18,
+          "delta": -282,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1040,
+          "current": 97,
+          "delta": -943,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 40,
+          "current": 0,
+          "delta": -40,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 40,
+          "current": 0,
+          "delta": -40,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 64,
+          "current": 63,
+          "delta": -1,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "920",
+      "current_pid": "368",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 4,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 280,
+          "current": 37,
+          "delta": -243,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 280,
+          "current": 37,
+          "delta": -243,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 280,
+          "current": 37,
+          "delta": -243,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 280,
+          "current": 37,
+          "delta": -243,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 660,
+          "current": 115,
+          "delta": -545,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 98,
+          "current": 3,
+          "delta": -95,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 98,
+          "current": 3,
+          "delta": -95,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 40,
+          "current": 47,
+          "delta": 7,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "1116",
+      "current_pid": "372",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 35,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [
+        "netstat_features.has_network_connection"
+      ],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 466,
+          "current": 1058,
+          "delta": 592,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 466,
+          "current": 1058,
+          "delta": 592,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 466,
+          "current": 1058,
+          "delta": 592,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 466,
+          "current": 1058,
+          "delta": 592,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1896,
+          "current": 3520,
+          "delta": 1624,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 44,
+          "current": 0,
+          "delta": -44,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 44,
+          "current": 0,
+          "delta": -44,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 49,
+          "current": 63,
+          "delta": 14,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "1164",
+      "current_pid": "392",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 38,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 0,
+          "current": 23,
+          "delta": 23,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 0,
+          "current": 23,
+          "delta": 23,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 0,
+          "current": 23,
+          "delta": 23,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 0,
+          "current": 23,
+          "delta": 23,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 0,
+          "current": 66,
+          "delta": 66,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 3,
+          "delta": 3,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 3,
+          "delta": 3,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 41,
+          "current": 64,
+          "delta": 23,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 19,
+          "current": 0,
+          "delta": -19,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 19,
+          "current": 0,
+          "delta": -19,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {
+        "dll_features": [
+          {
+            "name": "svchost.exe",
+            "unsigned_dll": false,
+            "dll_path_entropy": null,
+            "dll_from_temp_appdata": false,
+            "missing_from_peb_reflective_indicator": false,
+            "dll_not_in_known_list": true,
+            "dll_name_spoof_suspect": false,
+            "dll_zero_time_stamp": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "1260",
+      "current_pid": "412",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 28,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 415,
+          "current": 665,
+          "delta": 250,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 415,
+          "current": 665,
+          "delta": 250,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 415,
+          "current": 665,
+          "delta": 250,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 415,
+          "current": 665,
+          "delta": 250,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1360,
+          "current": 2420,
+          "delta": 1060,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 88,
+          "delta": 88,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 88,
+          "delta": 88,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 56,
+          "current": 64,
+          "delta": 8,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "1956",
+      "current_pid": "752",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 4,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 120,
+          "current": 20,
+          "delta": -100,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 120,
+          "current": 20,
+          "delta": -100,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 120,
+          "current": 20,
+          "delta": -100,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 120,
+          "current": 20,
+          "delta": -100,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 960,
+          "current": 82,
+          "delta": -878,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 42,
+          "current": 45,
+          "delta": 3,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "2352",
+      "current_pid": "824",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 8,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 288,
+          "current": 12,
+          "delta": -276,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 288,
+          "current": 12,
+          "delta": -276,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 288,
+          "current": 12,
+          "delta": -276,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 288,
+          "current": 12,
+          "delta": -276,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1698,
+          "current": 38,
+          "delta": -1660,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 2,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 2,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 41,
+          "current": 40,
+          "delta": -1,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "2432",
+      "current_pid": "932",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 43,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 198,
+          "current": 507,
+          "delta": 309,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 198,
+          "current": 507,
+          "delta": 309,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 198,
+          "current": 507,
+          "delta": 309,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 198,
+          "current": 507,
+          "delta": 309,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 820,
+          "current": 1452,
+          "delta": 632,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 182,
+          "delta": 182,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 182,
+          "delta": 182,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 43,
+          "current": 40,
+          "delta": -3,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "2988",
+      "current_pid": "968",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 8,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 213,
+          "current": 28,
+          "delta": -185,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 213,
+          "current": 28,
+          "delta": -185,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 213,
+          "current": 28,
+          "delta": -185,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 213,
+          "current": 28,
+          "delta": -185,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1760,
+          "current": 62,
+          "delta": -1698,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 4,
+          "delta": 4,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 4,
+          "delta": 4,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 51,
+          "current": 43,
+          "delta": -8,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "svchost.exe",
+      "baseline_pid": "3316",
+      "current_pid": "976",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 13,
+      "risk_flags_activated": [
+        "netstat_features.has_network_connection"
+      ],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 103,
+          "current": 69,
+          "delta": -34,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 103,
+          "current": 69,
+          "delta": -34,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 103,
+          "current": 69,
+          "delta": -34,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 103,
+          "current": 69,
+          "delta": -34,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 589,
+          "current": 205,
+          "delta": -384,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 0,
+          "current": 8,
+          "delta": 8,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 0,
+          "current": 8,
+          "delta": 8,
+          "spike": true
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 40,
+          "current": 42,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 19,
+          "current": 0,
+          "delta": -19,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 19,
+          "current": 0,
+          "delta": -19,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "sihost.exe",
+      "baseline_pid": "2568",
+      "current_pid": "1460",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 185,
+          "current": 11,
+          "delta": -174,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 185,
+          "current": 11,
+          "delta": -174,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 185,
+          "current": 11,
+          "delta": -174,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 185,
+          "current": 11,
+          "delta": -174,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1380,
+          "current": 70,
+          "delta": -1310,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "WmiPrvSE.exe",
+      "baseline_pid": "4348",
+      "current_pid": "520",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 35,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 15,
+          "current": 518,
+          "delta": 503,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 15,
+          "current": 518,
+          "delta": 503,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 15,
+          "current": 518,
+          "delta": 503,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 15,
+          "current": 518,
+          "delta": 503,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 62,
+          "current": 3958,
+          "delta": 3896,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 2,
+          "current": 43,
+          "delta": 41,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 2,
+          "current": 43,
+          "delta": 41,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "WmiPrvSE.exe",
+      "baseline_pid": "4712",
+      "current_pid": "1924",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 2,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 246,
+          "current": 138,
+          "delta": -108,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 246,
+          "current": 138,
+          "delta": -108,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 246,
+          "current": 138,
+          "delta": -108,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 246,
+          "current": 138,
+          "delta": -108,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1773,
+          "current": 788,
+          "delta": -985,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 19,
+          "current": 26,
+          "delta": 7,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 19,
+          "current": 26,
+          "delta": 7,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "ismserv.exe",
+      "baseline_pid": "2440",
+      "current_pid": "2980",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 159,
+          "current": 352,
+          "delta": 193,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 159,
+          "current": 352,
+          "delta": 193,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 159,
+          "current": 352,
+          "delta": 193,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 159,
+          "current": 352,
+          "delta": 193,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 620,
+          "current": 1364,
+          "delta": 744,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 60,
+          "current": 132,
+          "delta": 72,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 60,
+          "current": 132,
+          "delta": 72,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "lsass.exe",
+      "baseline_pid": "656",
+      "current_pid": "660",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 44,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 819,
+          "current": 1819,
+          "delta": 1000,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 819,
+          "current": 1819,
+          "delta": 1000,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 819,
+          "current": 1819,
+          "delta": 1000,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 819,
+          "current": 1819,
+          "delta": 1000,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 2440,
+          "current": 5368,
+          "delta": 2928,
+          "spike": true
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 639,
+          "current": 1656,
+          "delta": 1017,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 639,
+          "current": 1656,
+          "delta": 1017,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "winlogon.exe",
+      "baseline_pid": "572",
+      "current_pid": "568",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 84,
+          "current": 4,
+          "delta": -80,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 84,
+          "current": 4,
+          "delta": -80,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 84,
+          "current": 4,
+          "delta": -80,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 84,
+          "current": 4,
+          "delta": -80,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 660,
+          "current": 36,
+          "delta": -624,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "spoolsv.exe",
+      "baseline_pid": "2192",
+      "current_pid": "1760",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 3,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 386,
+          "current": 11,
+          "delta": -375,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 386,
+          "current": 11,
+          "delta": -375,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 386,
+          "current": 11,
+          "delta": -375,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 386,
+          "current": 11,
+          "delta": -375,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 1660,
+          "current": 83,
+          "delta": -1577,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.state_distribution.",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "netstat_features.connection_count",
+          "baseline": 40,
+          "current": 2,
+          "delta": -38,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "SearchUI.exe",
+      "baseline_pid": "3768",
+      "current_pid": "948",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 35,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 260,
+          "current": 572,
+          "delta": 312,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 260,
+          "current": 572,
+          "delta": 312,
+          "spike": true
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 260,
+          "current": 572,
+          "delta": 312,
+          "spike": true
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 260,
+          "current": 572,
+          "delta": 312,
+          "spike": true
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 2220,
+          "current": 4884,
+          "delta": 2664,
+          "spike": true
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "taskhostw.exe",
+      "baseline_pid": "2744",
+      "current_pid": "2968",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 8,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 12,
+          "current": 14,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 12,
+          "current": 14,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 12,
+          "current": 14,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 12,
+          "current": 14,
+          "delta": 2,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 60,
+          "current": 51,
+          "delta": -9,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 13,
+          "current": 52,
+          "delta": 39,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 2,
+          "current": 0,
+          "delta": -2,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 2,
+          "current": 0,
+          "delta": -2,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "taskhostw.exe",
+      "baseline_pid": "2868",
+      "current_pid": "4272",
+      "match_type": "name_paired",
+      "ppid_changed": false,
+      "anomaly_score": 0,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 260,
+          "current": 36,
+          "delta": -224,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 260,
+          "current": 36,
+          "delta": -224,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 260,
+          "current": 36,
+          "delta": -224,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 260,
+          "current": 36,
+          "delta": -224,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 920,
+          "current": 210,
+          "delta": -710,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 52,
+          "current": 13,
+          "delta": -39,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 7,
+          "delta": -13,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 7,
+          "delta": -13,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "MsMpEng.exe",
+      "baseline_pid": "2404",
+      "current_pid": "1860",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 13,
+      "risk_flags_activated": [],
+      "risk_flags_deactivated": [],
+      "count_changes": [
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 44,
+          "delta": 24,
+          "spike": true
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    },
+    {
+      "name": "explorer.exe",
+      "baseline_pid": "2904",
+      "current_pid": "3284",
+      "match_type": "name_paired",
+      "ppid_changed": true,
+      "anomaly_score": 6,
+      "risk_flags_activated": [
+        "pslist_features.orphan_process_flag"
+      ],
+      "risk_flags_deactivated": [
+        "pslist_features.parent_child_mismatch"
+      ],
+      "count_changes": [
+        {
+          "field": "thread_features.thread_with_no_module_count",
+          "baseline": 1162,
+          "current": 41,
+          "delta": -1121,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_count",
+          "baseline": 1162,
+          "current": 41,
+          "delta": -1121,
+          "spike": false
+        },
+        {
+          "field": "thread_features.thread_start_address_anomaly_count",
+          "baseline": 1162,
+          "current": 41,
+          "delta": -1121,
+          "spike": false
+        },
+        {
+          "field": "thread_features.anonymous_memory_thread_count",
+          "baseline": 1162,
+          "current": 41,
+          "delta": -1121,
+          "spike": false
+        },
+        {
+          "field": "dll_features.dll_count",
+          "baseline": 4239,
+          "current": 235,
+          "delta": -4004,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.process_depth",
+          "baseline": 3,
+          "current": 0,
+          "delta": -3,
+          "spike": false
+        },
+        {
+          "field": "pslist_features.commandline_length",
+          "baseline": 35,
+          "current": 23,
+          "delta": -12,
+          "spike": false
+        },
+        {
+          "field": "vad_features.no_file_backing_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        },
+        {
+          "field": "vad_features.vad_count",
+          "baseline": 20,
+          "current": 0,
+          "delta": -20,
+          "spike": false
+        }
+      ],
+      "value_changes": [],
+      "new_entities": {}
+    }
+  ],
+  "new_processes": [
+    {
+      "name": "Velociraptor.exe",
+      "current_pid": "4440",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "MSASCuiL.exe",
+      "current_pid": "1200",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "TrustedInstaller.exe",
+      "current_pid": "5008",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "LogonUI.exe",
+      "current_pid": "2000",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "LogonUI.exe",
+      "current_pid": "3276",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "wininit.exe",
+      "current_pid": "540",
+      "anomaly_score": 16,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection",
+        "pslist_features.orphan_process_flag"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "LockAppHost.exe",
+      "current_pid": "2452",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "LockAppHost.exe",
+      "current_pid": "5116",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "services.exe",
+      "current_pid": "652",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "wlms.exe",
+      "current_pid": "1932",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "msdtc.exe",
+      "current_pid": "3972",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "ApplicationFrameHost.exe",
+      "current_pid": "3268",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "RuntimeBroker.exe",
+      "current_pid": "2956",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "unsecapp.exe",
+      "current_pid": "2412",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "dllhost.exe",
+      "current_pid": "4988",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "csrss.exe",
+      "current_pid": "516",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "pslist_features.parent_child_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "ShellExperienceHost.exe",
+      "current_pid": "5032",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "LockApp.exe",
+      "current_pid": "2920",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "ProcessMonitorPortable.exe",
+      "current_pid": "4472",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "Procmon64.exe",
+      "current_pid": "4912",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "dwm.exe",
+      "current_pid": "1020",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "smss.exe",
+      "current_pid": "344",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1124",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1172",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1324",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1812",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1820",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1872",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1908",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "1964",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "2832",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "2996",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "3044",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "3180",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "4180",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "4296",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "svchost.exe",
+      "current_pid": "4532",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "sihost.exe",
+      "current_pid": "4380",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "winlogon.exe",
+      "current_pid": "576",
+      "anomaly_score": 16,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch",
+        "pslist_features.parent_child_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "spoolsv.exe",
+      "current_pid": "2792",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "netstat_features.has_network_connection"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "SearchUI.exe",
+      "current_pid": "4084",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "TiWorker.exe",
+      "current_pid": "2664",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "sysmon64.exe",
+      "current_pid": "324",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "sysmon64.exe",
+      "current_pid": "3056",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "sysmon64.exe",
+      "current_pid": "4140",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "taskhostw.exe",
+      "current_pid": "4384",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "taskhostw.exe",
+      "current_pid": "4388",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "procinfo_features.image_path_command_line_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "MsMpEng.exe",
+      "current_pid": "1952",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "MSASCui.exe",
+      "current_pid": "4328",
+      "anomaly_score": 10,
+      "intrinsic_risk_flags": [],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    },
+    {
+      "name": "explorer.exe",
+      "current_pid": "4752",
+      "anomaly_score": 13,
+      "intrinsic_risk_flags": [
+        "pslist_features.parent_child_mismatch"
+      ],
+      "known_malware_mutex_hits": [],
+      "suspicious_dlls": []
+    }
+  ],
+  "terminated_processes": [],
+  "driver_baseline_delta": {
+    "count_changes": [],
+    "risk_flags_activated": [],
+    "new_drivers": []
+  }
+}

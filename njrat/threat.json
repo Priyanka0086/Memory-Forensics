@@ -1,0 +1,287 @@
+[
+    {
+        "ioc": "5402CEFB8E7351079FC73A247056AF66678560568486DE484374213B643B4FBE",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "671292311014D61A6080FB0C9457491AB675F7A5BD3E7A47F7DD8692DE6D5E81",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "DD5032EF160209E470E2612A8A3D5F59",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "224.0.0.252",
+        "type": "ip",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 1,
+                "harmless": 55
+            }
+        ]
+    },
+    {
+        "ioc": "A85EB04C60D9F7AE6C25298B2A8FE3E9",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "790F62F68898EFCDEE21F1D6CB2C258B",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "DD15E2262EB7C2E14FCB0188753F6B0E",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "fs.microsoft.com",
+        "type": "domain",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 56
+            }
+        ]
+    },
+    {
+        "ioc": "F34D5F2D4577ED6D9CEEC516C1F5A744",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "error": "HTTP 502"
+            }
+        ]
+    },
+    {
+        "ioc": "CA6C5A7558DEFB4CBE1E64C706A78D83C39DB4F2789C08882F0BE9F2F765AED1",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "0E543673D54BF3A1FB3198407B216103",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "settings-win.data.microsoft.com",
+        "type": "domain",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 58
+            }
+        ]
+    },
+    {
+        "ioc": "v10.events.data.microsoft.com",
+        "type": "domain",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 58
+            }
+        ]
+    },
+    {
+        "ioc": "6C51C1968A7AD1B40251AD58F44602114888DB2859B1375E0BFFC7EB8C2C22E4",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "g.live.com",
+        "type": "domain",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 60
+            }
+        ]
+    },
+    {
+        "ioc": "0686C38F513C3C5A7ABB07388FA4DB87",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "B1581E884727B450C4DBFA9360F3DB7C",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "247B9220E5D9B720A82B2C8B5069AD69",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "info": "No data found"
+            },
+            {
+                "source": "MalwareBazaar",
+                "info": "No data found"
+            }
+        ]
+    },
+    {
+        "ioc": "api.msn.com",
+        "type": "domain",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 0,
+                "suspicious": 0,
+                "harmless": 58
+            }
+        ]
+    },
+    {
+        "ioc": "47D7B42AAB30724BF3A1606435A45AEEF2DD24CE8E9D6068CF3E2D859A7AD65F",
+        "type": "hash",
+        "enrichment": [
+            {
+                "source": "VirusTotal",
+                "malicious": 58,
+                "suspicious": 0,
+                "harmless": 0
+            },
+            {
+                "source": "MalwareBazaar",
+                "malware_family": "njrat",
+                "file_type": "exe"
+            }
+        ]
+    }
+]

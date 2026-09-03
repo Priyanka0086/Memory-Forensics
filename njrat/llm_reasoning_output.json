@@ -1,0 +1,64 @@
+{
+  "attack_narrative": "The incident began with the execution of masqueraded rogue system processes, specifically winlogon.exe (PID 576) and explorer.exe (PID 4752), both exhibiting parent-child and image path anomalies. These unauthorized processes initiated a massive, system-wide process injection campaign (T1055) targeting critical binaries. Targeted services included lsass.exe (PID 660), svchost.exe (PIDs 8, 384, 1268), and WmiPrvSE.exe (PID 520), all of which experienced significant spikes in anonymous memory threads. Security tools, including sysmon64.exe (PID 2460) and Velociraptor.exe (PID 2472), were also injected to neutralize local monitoring and defense mechanisms. Active command-and-control (C2) communication is indicated by high-volume network connections originating from injected processes like PID 8, aligning with threat intelligence identifying local NJRat malware.",
+  "what_happened": "Masqueraded system processes winlogon.exe (PID 576) and explorer.exe (PID 4752) were launched with abnormal parent processes and paths. System-wide process injection (T1055) was subsequently executed, causing massive spikes in anonymous memory threads across dozens of processes, including an increase of 1,000 threads in lsass.exe (PID 660). Threat intelligence confirmed that the hash 47D7B42AAB30724BF3A1606435A45AEEF2DD24CE8E9D6068CF3E2D859A7AD65F matches the malicious NJRat trojan family. Multiple injected processes established hundreds of suspicious outbound network connections.",
+  "why": "The diagnosis of compromise is confirmed by comparing the incident state against the baseline. While baseline noise did contain some minor injection-like signatures, the post-incident state shows dramatic, massive escalations in thread counts and new, mismatched critical processes like winlogon.exe (PID 576) and explorer.exe (PID 4752). Furthermore, threat intelligence positively attributed an observed file hash to NJRat, indicating active command-and-control capabilities on the host. The combination of system-wide process injection, EDR tool tampering, and high netstat connection counts strongly supports the upstream compromised verdict of 85.0.",
+  "key_evidence": [
+    {
+      "pid": "576",
+      "process": "winlogon.exe",
+      "signal": "Image Path Mismatch / Parent Process Mismatch",
+      "significance": "Masqueraded system process running from an invalid path with an incorrect parent, acting as a critical injection source.",
+      "new_or_baseline": "new"
+    },
+    {
+      "pid": "4752",
+      "process": "explorer.exe",
+      "signal": "Parent Process Mismatch / Process Injection",
+      "significance": "A new rogue explorer instance running with an unexpected parent and performing thread injection.",
+      "new_or_baseline": "new"
+    },
+    {
+      "pid": "660",
+      "process": "lsass.exe",
+      "signal": "Spike of 1000 Anonymous Memory Threads / High Network Connections",
+      "significance": "Critical security process heavily targeted with thread injection and initiating unusual outbound network connections.",
+      "new_or_baseline": "escalated"
+    },
+    {
+      "pid": null,
+      "process": null,
+      "signal": "Hash 47D7B42AAB30724BF3A1606435A45AEEF2DD24CE8E9D6068CF3E2D859A7AD65F",
+      "significance": "Threat intelligence matches this observed hash directly to the malicious NJRat malware family.",
+      "new_or_baseline": "new"
+    }
+  ],
+  "severity_assessment": {
+    "overall_verdict": "Confirmed Compromised",
+    "host_score_agreement": "agrees",
+    "rationale": "The upstream score of 85.0 correctly reflects a severe compromise, driven by widespread process injection, defense evasion, and confirmed threat intelligence matches for active NJRat trojans."
+  },
+  "alternative_explanations": "A heavily instrumented security audit or debugging session was considered due to the high presence of diagnostic tools like Procmon, Sysmon, and Velociraptor. However, the presence of masqueraded system binaries (PID 576 and 4752) and the positive signature match for NJRat rule out any benign explanation.",
+  "recommendations": [
+    "Isolate the host from the network immediately to disrupt active outbound NJRat command-and-control communications.",
+    "Terminate the masqueraded malicious processes winlogon.exe (PID 576) and explorer.exe (PID 4752).",
+    "Locate and delete any files matching the NJRat hash 47D7B42AAB30724BF3A1606435A45AEEF2DD24CE8E9D6068CF3E2D859A7AD65F.",
+    "Perform a full system reboot to purge malicious memory injections from critical processes like LSASS and Svchost.",
+    "Inspect the system for persistence mechanisms, such as scheduled tasks or run keys, pointing to the rogue winlogon or explorer binaries.",
+    "Verify the integrity of local EDR and monitoring agents, specifically Velociraptor (PID 2472) and Sysmon (PID 2460), which suffered heavy process injections."
+  ],
+  "attribution": {
+    "likely_technique_ids": [
+      "T1055",
+      "T1036.005",
+      "T1071.001"
+    ],
+    "kill_chain_stages": [
+      "Defense Evasion",
+      "Execution",
+      "Command and Control"
+    ],
+    "possible_actor_or_family": "NJRat",
+    "confidence": "High",
+    "rationale": "Attribution is based on a direct signature match from MalwareBazaar linking the active host-compromise indicators to the NJRat trojan family, combined with the classic NJRat system-wide memory injection and C2 behavior patterns."
+  }
+}
