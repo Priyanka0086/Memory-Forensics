@@ -1,0 +1,6 @@
+{
+    "threat_score": 80,
+    "anomaly_score": 100.0,
+    "final_score": 88.0,
+    "verdict": "COMPROMISED"
+}

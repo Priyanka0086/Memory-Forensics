@@ -1,0 +1,106 @@
+{
+    "total_score": 80,
+    "verdict": "COMPROMISED",
+    "details": [
+        {
+            "ioc": "208C7725F70C75D8C96CCAF5B22F83B8B1C66D8C9FFF48465B1C9F4A77425569",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "BFF0F2E57CD2358AC8F519F6F5692A46D97EC4E9B763D47101CEF31712FD4738",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "924665B8202A7049BE45596FA4AE5F8F",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "192.169.34.255",
+            "type": "ip",
+            "score": 0
+        },
+        {
+            "ioc": "1177BBF7BD66C6BBA5DEC2321B911EA2",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "v10.vortex-win.data.microsoft.com",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "BA41B5441869EA118702E29DCF9C00B1",
+            "type": "hash",
+            "score": 40
+        },
+        {
+            "ioc": "5C31CFDE3181A762CA91D21902DEF1B4",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "A9AD4DB323600C6F33B9446AC8F2013A",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "EE479D0FB2DDF01357045FD9B133591DFBD5F1305E1B5B62822EAACBEA5DA309",
+            "type": "hash",
+            "score": 40
+        },
+        {
+            "ioc": "5E0145CEF36FA9BFBA7DE33AA683B8ED",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "255.34.169.192.in-addr.arpa",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "www.microsoft.com",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "1C90A322F55D574EF703B9CB0ADFB379CEFA33A2B5D72F04A6E9AAA2F209F6B5",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "crl.microsoft.com",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "B6E333F2C1AA300E86F4E81A7A0E05734152F858F56AC0E008E3B104BE60DE74",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "remnew.duckdns.org",
+            "type": "domain",
+            "score": 0
+        },
+        {
+            "ioc": "A68324ADB4F5664AF8A79E04062F4A92",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "C6E51DDA1622035B42B177C9AFE67C30",
+            "type": "hash",
+            "score": 0
+        },
+        {
+            "ioc": "5DBECC126D5E97B35E18B5A4896B61E6",
+            "type": "hash",
+            "score": 0
+        }
+    ]
+}
