@@ -3749,7 +3749,7 @@ def combined_assessment(threat_data, anomaly_results):
     # ==================================
     if final_score >= 70:
         verdict = "COMPROMISED"
-    elif final_score >= 40:
+    elif final_score >= 45:
         verdict = "SUSPICIOUS"
     else:
         verdict = "CLEAN"
@@ -3868,7 +3868,7 @@ def assess_host(enriched_data):
     # ------------------------
     if total_score >= 70:
         verdict = "COMPROMISED"
-    elif total_score >= 40:
+    elif total_score >= 45:
         verdict = "SUSPICIOUS"
     else:
         verdict = "CLEAN"
@@ -4256,7 +4256,7 @@ def run_llm_module(evidence_file, pre_evidence_file, baseline_file,
         sys.exit(1)
 
     # Get GEMINI_API_KEY directly from environment just before use
-    api_key = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6KFwnB9mn19NtaT-6OcUOsHmp8cJyzkU9O9DDkJrSUXDg")
+    api_key = os.environ.get("GEMINI_API_KEY", "")
 
     if not api_key:
         print("[!] GEMINI_API_KEY is not set. Set it with:")
